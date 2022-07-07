@@ -54,7 +54,7 @@ function crazyDiff(num){
     return (num - 19) * 3 }
 }
 
-console.log(crazyDiff(20))
+console.log(crazyDiff(22))
 
 
 
@@ -85,38 +85,104 @@ function boundary(num1){
  It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n------------------EXERCISE 5------------------");
+
+function strivify(str){
+    let splitstr = str.split(" ")
+    if(splitstr[0] === "Strive"){
+        return str
+    }
+    else{
+        return "Strive " + str
+    }
+}
+
+
+console.log(strivify("Hello World"))
 
 /* EXERCISE 6
  Write a function called "check3and7" which accepts a positive number as a parameter and checks if it is a multiple of 3 or a multiple of 7.
  HINT: Modulus Operator
 */
 
-/* WRITE YOUR ANSWER HERE */
+
+
+console.log("\n------------------EXERCISE 6------------------");
+
+function check3and7(num2){
+    
+    if(num2 >= 0 && num2 % 3 === 0 || num2 % 7 === 0){
+        return true
+    }
+    else{
+        return false
+    }
+    }
+console.log(check3and7(15))
+console.log(check3and7(13))
+console.log(check3and7(21))
+console.log(check3and7(11))
 
 /* EXERCISE 7
  Write a function called "reverseString" which programmatically reverses a given string (es.: Strive => evirtS).
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n------------------EXERCISE 7------------------");
+
+function reverseString(string){
+    let reverseString1 = string.split(" ");
+    let reverseString2 = reverseString1.reverse().join("")
+    return reverseString2
+
+}
+console.log(reverseString("hello world"))
 
 /* EXERCISE 8
  Write a function called "upperFirst" which capitalizes the first letter of each word of a given string passed as a parameter.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n------------------EXERCISE 8------------------");
+
+function upperFirst(FCL){
+    let fcl1 = FCL.split(" ");
+    for (let i = 0; i < fcl1.length; i++) {
+        fcl1[i] = fcl1[i].charAt(0).toUpperCase() + fcl1[i].substring(1);   
+    }
+    return fcl1.join(" ")
+}
+console.log(upperFirst("hello world"))
 
 /* EXERCISE 9
  Write a function called "cutString" which creates a new string without the first and last character of a given string passed as a parameter.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n------------------EXERCISE 9------------------");
+
+function cutString(str1){
+    let str2 = str1.split("");
+    str2.shift();
+    str2.pop();
+    
+
+    return str2.join("");
+}
+console.log(cutString("string"))
 
 /* EXERCISE 10
  Write a function called "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n------------------EXERCISE 10------------------");
+
+function giveMeRandom(n){
+    let n1 = []
+    n1 = Math.floor(Math.random() * 10)
+
+    return n1
+   
+}
+
+console.log(giveMeRandom(4))
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
